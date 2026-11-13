@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>野灶营地 · 开业活动全案</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;
+       background:#F3EFE8;color:#231E19;line-height:1.72;font-size:15px;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:520px;margin:0 auto;background:#F3EFE8;min-height:100vh;}
+
+  .hero{background:linear-gradient(160deg,#1A1512 0%,#2A1C12 55%,#3A2414 100%);
+        padding:36px 24px 32px;color:#fff;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-70px;bottom:-90px;width:240px;height:240px;
+        border-radius:50%;background:radial-gradient(circle,rgba(255,140,50,.35),transparent 70%);}
+  .hero .tag{display:inline-block;font-size:11px;letter-spacing:1.5px;color:#FFB060;
+        border:1px solid rgba(255,176,96,.45);padding:3px 10px;border-radius:20px;margin-bottom:14px;}
+  .hero h1{font-size:26px;font-weight:800;letter-spacing:1px;line-height:1.35;}
+  .hero h1 em{font-style:normal;color:#FFC05C;}
+  .hero p{font-size:13px;color:#B9ABA0;margin-top:12px;line-height:1.7;}
+  .hero .kpi{display:flex;gap:10px;margin-top:18px;position:relative;z-index:2;}
+  .hero .kpi div{flex:1;background:rgba(255,255,255,.07);border-radius:10px;padding:10px 8px;text-align:center;}
+  .hero .kpi b{display:block;font-size:17px;color:#FFC05C;font-weight:800;}
+  .hero .kpi span{font-size:10px;color:#A89888;}
+
+  .sec{padding:26px 18px 2px;}
+  .sec-h{display:flex;align-items:baseline;gap:8px;margin-bottom:14px;padding-left:2px;}
+  .sec-h .num{font-size:12px;font-weight:800;color:#fff;background:#FF7A28;
+        border-radius:6px;padding:1px 7px;letter-spacing:.5px;}
+  .sec-h h2{font-size:17px;font-weight:800;letter-spacing:.5px;}
+
+  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(60,40,20,.06);
+        margin-bottom:14px;border:1px solid rgba(0,0,0,.03);}
+  .card .pad{padding:16px 16px 18px;}
+  .card h3{font-size:15px;font-weight:700;margin-bottom:4px;}
+  .card .sub{font-size:12px;color:#9A8A7A;margin-bottom:12px;}
+
+  .lead{font-size:13.5px;color:#4A4038;margin-bottom:12px;}
+  .list{list-style:none;}
+  .list li{font-size:13.5px;color:#4A4038;padding:7px 0 7px 17px;position:relative;
+        border-bottom:1px dashed #EFE8DE;}
+  .list li:last-child{border-bottom:none;}
+  .list li::before{content:"";position:absolute;left:3px;top:15px;width:5px;height:5px;
+        border-radius:50%;background:#FF7A28;}
+  .list b{color:#231E19;}
+
+  table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  th{background:#FAF6F0;color:#8A7A6A;font-weight:700;font-size:11.5px;text-align:left;
+     padding:8px 6px;border-bottom:1px solid #EDE4D8;letter-spacing:.3px;}
+  td{padding:9px 6px;border-bottom:1px solid #F2ECE3;vertical-align:top;color:#3E362E;}
+  tr:last-child td{border-bottom:none;}
+  td.hi{color:#D9560F;font-weight:700;}
+
+  .act{background:#fff;border-radius:16px;margin-bottom:12px;overflow:hidden;
+       box-shadow:0 2px 10px rgba(60,40,20,.06);border:1px solid rgba(0,0,0,.03);}
+  .act .top{background:linear-gradient(100deg,#2B1C12,#3E2716);padding:13px 16px;display:flex;
+       align-items:center;gap:10px;}
+  .act .top .idx{font-size:11px;font-weight:800;color:#1A1310;background:#FFC05C;
+       border-radius:5px;padding:1px 7px;}
+  .act .top h4{font-size:15px;font-weight:700;color:#fff;flex:1;letter-spacing:.3px;}
+  .act .top .goal{font-size:10.5px;color:#B39A80;}
+  .act .body{padding:14px 16px 16px;}
+  .kv{font-size:13px;color:#4A4038;margin-bottom:6px;}
+  .kv b{color:#231E19;display:inline-block;min-width:52px;}
+
+  .warn{background:#FFF6EC;border:1px solid #FFE0BC;border-radius:14px;padding:16px 16px 14px;margin-bottom:14px;}
+  .warn h3{font-size:14px;font-weight:700;color:#B4581A;margin-bottom:10px;}
+  .warn ol{padding-left:18px;}
+  .warn li{font-size:13px;color:#5E4A38;margin-bottom:9px;line-height:1.66;}
+  .warn li:last-child{margin-bottom:0;}
+  .warn b{color:#B4581A;}
+
+  .calc{background:#1F1913;border-radius:16px;padding:18px 16px;color:#E8DED2;margin-bottom:14px;}
+  .calc h3{font-size:14px;color:#FFC05C;font-weight:700;margin-bottom:12px;}
+  .calc .row{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;
+        border-bottom:1px dashed rgba(255,255,255,.1);}
+  .calc .row:last-of-type{border-bottom:none;}
+  .calc .row span{color:#A89888;}
+  .calc .row b{color:#fff;font-weight:700;}
+  .calc .note{font-size:11.5px;color:#8A7A6A;margin-top:12px;line-height:1.6;}
+
+  .foot{padding:22px 18px 34px;text-align:center;font-size:11px;color:#A89888;line-height:1.9;}
+  .foot b{color:#7A6A5A;}
+  .lnk{color:#D9560F;text-decoration:none;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="tag">军粮城 · 和顺欣园16号楼 · 200㎡ · 17桌66座</div>
+    <h1>野灶营地<br><em>开业活动全案</em></h1>
+    <p>装修期的目标不是把围挡做得好看，是把路过的人装进群里。<br>开业的目标不是当天热闹，是把人留下来第二次来。</p>
+    <div class="kpi">
+      <div><b>300</b><span>创始会员名额</span></div>
+      <div><b>9.9</b><span>午市引流款</span></div>
+      <div><b>2360</b><span>日保本流水</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">00</span><h2>一句话讲清打法</h2></div>
+    <div class="card"><div class="pad">
+      <p class="lead">三个阶段、三件事，别混着做：</p>
+      <ul class="list">
+        <li><b>装修期（现在）</b>：围挡把小票引到群里，攒人。这个阶段不卖东西。</li>
+        <li><b>开业前3天</b>：把群里的人变成到店的人，靠 9.9 和会员价。</li>
+        <li><b>开业后第8天起</b>：停止大额让利，靠储值和会员价把人锁住。</li>
+      </ul>
+      <p class="lead" style="margin-top:12px;color:#B4581A;font-weight:600;">
+        顺序不能反。群里没人的时候开业，就是花自己的钱请陌生人吃饭。</p>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">01</span><h2>装修期：围挡怎么干</h2></div>
+    <div class="card">
+      <div class="pad" style="padding-bottom:8px;">
+        <h3>三件套已经出图</h3>
+        <div class="sub">可直接交喷绘店，规格都标好了</div>
+        <ul class="list">
+          <li><a class="lnk" href="./yezao-fence-pack.html">围挡物料汇总页（含尺寸与材质）</a></li>
+          <li>主围挡 <b>4.0×2.2m</b>，门面净宽4米整块出，不用拼</li>
+          <li>路口立牌 <b>60×90cm 做2个</b>，放50米外和通道拐角</li>
+          <li>群码贴纸 <b>25×25cm 印8张</b>，每周一换</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card"><div class="pad">
+      <h3>围挡上必须有的三句话</h3>
+      <div class="sub">少一句，转化立刻掉一半</div>
+      <ul class="list">
+        <li><b>军粮城第一家帐篷餐厅</b>——告诉人"这是什么"</li>
+        <li><b>扫码进群，9.9元吃砂锅粉面</b>——告诉人"现在能得什么"</li>
+        <li><b>12月XX日开锅</b>——告诉人"什么时候来"</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">02</span><h2>扫码给什么：四层钩子</h2></div>
+    <div class="card"><div class="pad">
+      <div class="sub">从"立刻想要"到"长期身份"，层层加码</div>
+      <table>
+        <tr><th style="width:56px;">层级</th><th>给什么</th><th style="width:78px;">解决什么</th></tr>
+        <tr><td>即时</td><td>开业后首单 <b>10元无门槛券</b></td><td>现在给不了东西</td></tr>
+        <tr><td>身份</td><td><b>创始会员</b>：粉面终身9.9（午市）+ 硬菜会员价</td><td>长期留下的理由</td></tr>
+        <tr><td>刺激</td><td>群内每周五抽 <b>1份霸王餐</b></td><td>群不变成死群</td></tr>
+        <tr><td>裂变</td><td>拉3位邻居进群，开业当天 <b>加送一份配菜</b></td><td>群自己长大</td></tr>
+      </table>
+      <p class="lead" style="margin-top:12px;">
+        核心逻辑：<b>进群 = 成为会员</b>。会员价是你的常规价，成本可控；客人拿到的是身份，不是白送。</p>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">03</span><h2>群里这10天怎么养</h2></div>
+    <div class="card"><div class="pad">
+      <div class="sub">每天只发一条，别刷屏，别发广告</div>
+      <table>
+        <tr><th style="width:66px;">时间</th><th>发什么</th></tr>
+        <tr><td>D-10 ~ D-6</td><td>施工进度（照片或15秒视频），只发过程不带货</td></tr>
+        <tr><td>D-5</td><td>"17桌长这样"：帐篷、灶台、门头各1张</td></tr>
+        <tr><td>D-3（周五）</td><td>晚8点第一轮霸王餐抽奖，发红包定手气</td></tr>
+        <tr><td>D-2</td><td>"菜单预告"：红烧肉、猪蹄、排骨实拍各1张</td></tr>
+        <tr><td>D-1</td><td><b>开业通知</b>：几点开门／往哪排队／9.9几点开卖／卖完怎么办</td></tr>
+      </table>
+      <p class="lead" style="margin-top:12px;color:#B4581A;font-weight:600;">
+        D-1 这条是整个围挡期的收口。写不清楚，前面10天白干。</p>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">04</span><h2>开业六个动作</h2></div>
+
+    <div class="act">
+      <div class="top"><span class="idx">01</span><h4>9.9 砂锅粉面</h4><span class="goal">引流</span></div>
+      <div class="body">
+        <div class="kv"><b>时段</b>每日 11:00–13:00，只做午市</div>
+        <div class="kv"><b>限量</b>100份／天，卖完挂"今日售完"</div>
+        <div class="kv"><b>资格</b>群内创始会员，凭群内券核销</div>
+        <div class="kv"><b>限制</b>每人每天1份·限堂食·不打包·不与其他优惠同享</div>
+        <div class="kv"><b>为什么</b>午市是社区店最弱的一餐，用它把人拉进门</div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="top"><span class="idx">02</span><h4>创始会员 · 限300名</h4><span class="goal">锁身份</span></div>
+      <div class="body">
+        <div class="kv"><b>获取</b>扫码进群即自动获得，群内@全体公示名额进度</div>
+        <div class="kv"><b>权益</b>粉面终身9.9（午市）｜硬菜会员价（午市）｜首单10元券</div>
+        <div class="kv"><b>关键</b>会员价<b>只在午市</b>开放，晚市走正价</div>
+        <div class="kv"><b>为什么</b>晚市是帐篷和氛围卖钱的时段，不能让价格替氛围说话</div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="top"><span class="idx">03</span><h4>群内霸王餐</h4><span class="goal">养群</span></div>
+      <div class="body">
+        <div class="kv"><b>时间</b>每周五 20:00，装修期抽3轮</div>
+        <div class="kv"><b>奖品</b>营地砂锅鸡1锅 + 粉面2碗（面值108）</div>
+        <div class="kv"><b>规则</b>群内发红包，手气最佳中奖，开业后7天内到店用</div>
+        <div class="kv"><b>成本</b>3轮约200元，换群日活，比投任何广告都便宜</div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="top"><span class="idx">04</span><h4>储值：充300送50 / 充500送100</h4><span class="goal">锁复购</span></div>
+      <div class="body">
+        <div class="kv"><b>时间</b>开业当天起30天内</div>
+        <div class="kv"><b>限制</b>赠送金额不可退现、不可开票，储值仅限本人使用</div>
+        <div class="kv"><b>为什么</b>发券只能让人来一次，储值能让人来十次</div>
+        <div class="kv"><b>提醒</b>储值率做不到15%，就说明你的第一餐没让人记住</div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="top"><span class="idx">05</span><h4>点评代金券预售</h4><span class="goal">线上曝光</span></div>
+      <div class="body">
+        <div class="kv"><b>面值</b>50抵60 ／ 100抵120（约17%让利）</div>
+        <div class="kv"><b>前提</b>门店必须先在点评完成认领和资质审核，否则码扫不出来</div>
+        <div class="kv"><b>作用</b>有交易数据的门店才进得了榜单，这是免费流量的入口</div>
+        <div class="kv"><b>限制</b>不与会员价叠加，不与9.9同享</div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="top"><span class="idx">06</span><h4>开业前3天到店礼</h4><span class="goal">加好感</span></div>
+      <div class="body">
+        <div class="kv"><b>时间</b>D1–D3</div>
+        <div class="kv"><b>给什么</b>凭群身份送一份小食或饮品（成本控制在3–5元）</div>
+        <div class="kv"><b>为什么</b>让"看了很久才来"的人觉得没白等，一句话就能换来一条好评</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">05</span><h2>菜单与分量</h2></div>
+    <div class="card"><div class="pad">
+      <div class="sub">价格标注"建议"，最终以老板拍板为准</div>
+      <table>
+        <tr><th>菜品</th><th>分量</th><th style="width:44px;">正价</th><th style="width:44px;">会员</th></tr>
+        <tr><td><b>砂锅粉面</b></td><td>单人份</td><td class="hi">15</td><td class="hi">9.9</td></tr>
+        <tr><td><b>营地砂锅鸡</b></td><td>2.5斤鸡腿肉＋10种配菜免费续<br>3–4人份</td><td>78</td><td>58</td></tr>
+        <tr><td><b>营地红烧肉</b></td><td>五花肉1–1.5斤＋土豆<br>2–3人份</td><td>68</td><td>58</td></tr>
+        <tr><td><b>营地香辣猪蹄</b></td><td>猪蹄（带骨）2斤＋土豆<br>3–4人份</td><td>78</td><td>68</td></tr>
+        <tr><td><b>营地红烧排骨</b></td><td>排骨（带骨）2斤＋土豆<br>3–4人份</td><td>98</td><td>88</td></tr>
+        <tr><td>戳子肉</td><td>待定价</td><td>—</td><td>—</td></tr>
+        <tr><td>卤货／凉菜／炸货</td><td>建议各3–4款，做配菜不做主菜</td><td>—</td><td>—</td></tr>
+      </table>
+      <p class="lead" style="margin-top:12px;">
+        <b>"带骨"和"含土豆"必须写进菜单。</b>社区店客人最怕"看着一锅，翻半天全是骨头"。你主动写清楚，反而没人挑，还显得实在。</p>
+      <p class="lead" style="color:#B4581A;font-weight:600;">
+        已砍板烧鱼——不是活鱼的东西，卖出去就是差评源头。</p>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">06</span><h2>五条核销铁律</h2></div>
+    <div class="warn">
+      <h3>不堵住这五个口子，开业就是白干</h3>
+      <ol>
+        <li><b>9.9只限堂食、限午市、每人每天1份。</b>一旦能打包，隔壁小区能一天扫走三十碗。</li>
+        <li><b>配菜免费续，只限点了硬菜的桌。</b>不然9.9一碗粉面配菜续到底，能吃饱两个人。</li>
+        <li><b>会员价与代金券不叠加、与9.9不同享。</b>叠加一次，那桌就是纯亏。</li>
+        <li><b>储值赠送金额不可退现。</b>这条写进小票和群公告，不要靠嘴说。</li>
+        <li><b>9.9卖完就是卖完。</b>不做"再给你加一碗"，一破例，明天门口就是来要面的队伍。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">07</span><h2>算账：打爆要花多少钱</h2></div>
+    <div class="calc">
+      <h3>日成本与保本线</h3>
+      <div class="row"><span>房租</span><b>300 元</b></div>
+      <div class="row"><span>人工</span><b>750 元</b></div>
+      <div class="row"><span>水电</span><b>100 元</b></div>
+      <div class="row"><span>折旧</span><b>150 元</b></div>
+      <div class="row"><span>日固定成本</span><b>1300 元</b></div>
+      <div class="row"><span>综合毛利按55%</span><b>保本流水 2360 元/天</b></div>
+      <div class="row"><span>午40+晚50人次</span><b>保本人均 26 元</b></div>
+      <div class="note">
+        9.9 每碗按成本7元算，卖一碗毛利2.9元。<br>
+        一天100份，等于放弃约510元的正常收入——这就是"打爆"的代价。<br>
+        一个月约1.5万，老板要提前认这个数，别开业后第5天心疼。
+      </div>
+    </div>
+    <div class="card"><div class="pad">
+      <h3>三个不能被突破的线</h3>
+      <ul class="list">
+        <li><b>9.9 不超过总客流40%</b>，否则人均永远上不去</li>
+        <li><b>会员价只在午市</b>，晚市必须回正价</li>
+        <li><b>粉面产能上限约120碗/天</b>（3分钟/碗×2灶×3小时），到顶就挂售完，不要硬扛</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">08</span><h2>开业后第8天起</h2></div>
+    <div class="card"><div class="pad">
+      <p class="lead">大额让利必须停，不停就是慢性失血。这时候靠三件事：</p>
+      <ul class="list">
+        <li><b>储值</b>继续推，把一次性客人变成预存款客人</li>
+        <li><b>帐篷预订制</b>：5顶只接受预订，优先给带孩子的家庭，拍成"五顶帐篷"合集做招商封面</li>
+        <li><b>抖音达人三句脚本</b>：①军粮城第一家帐篷餐厅，开在菜市场旁边 ②在军粮城街边生火做饭，砂锅咕嘟一整天 ③9.9吃砂锅粉面，卖完就没了</li>
+      </ul>
+      <p class="lead" style="margin-top:12px;">
+        <b>招商素材从D1就开始攒</b>：11:30和17:30的排队照、日流水表、老板故事、单店模型卡。开业活动账和经营账必须分开记——9.9的让利算营销费，别混进毛利，否则模型算出来是亏的。</p>
+    </div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-h"><span class="num">09</span><h2>执行清单</h2></div>
+    <div class="card"><div class="pad">
+      <table>
+        <tr><th style="width:60px;">时机</th><th>动作</th></tr>
+        <tr><td>本周</td><td>建微信群（建2个）→ 拿群码 → 印贴纸8张</td></tr>
+        <tr><td>本周</td><td>围挡图交喷绘店，倒排<b>3–5天</b>工期</td></tr>
+        <tr><td>本周</td><td>门店在点评完成认领＋资质审核</td></tr>
+        <tr><td>装修期</td><td>搭帐篷、挂串灯——晚上亮起来比围挡有用</td></tr>
+        <tr><td>每周一</td><td>换群码贴纸，定闹钟</td></tr>
+        <tr><td>每周五</td><td>晚8点群内抽霸王餐</td></tr>
+        <tr><td>D-1</td><td>发开业通知（时间/排队/9.9规则）</td></tr>
+        <tr><td>D1</td><td>9.9开卖 + 储值上线 + 开始拍排队照</td></tr>
+      </table>
+    </div></div>
+  </div>
+
+  <div class="foot">
+    野灶营地 · 开业活动全案<br>
+    <b>价格与分量以老板最终确认为准</b><br>
+    以上活动参数为建议配置，落到后台前请与实际产能复核
+  </div>
+
+</div>
+</body>
+</html>
